@@ -1,0 +1,10 @@
+@namespace("org.kitesdk.examples.oozie")
+protocol PersonProtocol {
+    record Person {
+        string id;
+        string firstName;
+        string lastName;
+        int age;
+        string version = "";
+    }
+}
