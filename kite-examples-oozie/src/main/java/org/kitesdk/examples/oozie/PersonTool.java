@@ -22,12 +22,10 @@ public class PersonTool extends CrunchTool {
     final Path inputPath = new Path(args[0]);
     final URI outputDatasetUri = new URI(args[1]);
 
-    final Dataset<Person> outputDataset = Datasets.createPartition(outputDatasetUri);
-
     final PCollection<String> rawPersons = read(From.textFile(inputPath));
     final PCollection<Person> processedPersons = doSomeProcessing(rawPersons);
 
-    write(processedPersons, CrunchDatasets.asTarget(outputDataset, true));
+    write(processedPersons, CrunchDatasets.asTarget(outputDatasetUri.toString(), true));
 
     final PipelineResult result = run();
     if (!result.succeeded()) {

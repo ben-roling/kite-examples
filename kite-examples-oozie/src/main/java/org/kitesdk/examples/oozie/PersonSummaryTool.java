@@ -20,13 +20,12 @@ public class PersonSummaryTool extends CrunchTool {
     final URI outputDatasetUri = new URI(args[1]);
 
     Dataset<PersonOutcomes> inputDataset = Datasets.load(inputDatasetUri);
-    final Dataset<PersonSummary> outputDataset = Datasets.createPartition(outputDatasetUri);
     
     final PCollection<PersonOutcomes> personOutcomes = read(CrunchDatasets.asSource(inputDataset, PersonOutcomes.class));
     
     final PCollection<PersonSummary> personSummaries = doSomeProcessing(personOutcomes);
 
-    write(personSummaries, CrunchDatasets.asTarget(outputDataset, true));
+    write(personSummaries, CrunchDatasets.asTarget(outputDatasetUri.toString(), true));
 
     final PipelineResult result = run();
     if (!result.succeeded()) {

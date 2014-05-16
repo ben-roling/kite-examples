@@ -20,13 +20,12 @@ public class PersonOutcomesTool extends CrunchTool {
     final URI outputDatasetUri = new URI(args[1]);
 
     Dataset<Person> inputDataset = Datasets.load(inputDatasetUri);
-    final Dataset<PersonOutcomes> outputDataset = Datasets.createPartition(outputDatasetUri);
     
     final PCollection<Person> persons = read(CrunchDatasets.asSource(inputDataset, Person.class));
     
     final PCollection<PersonOutcomes> personOutcmes = doSomeProcessing(persons);
 
-    write(personOutcmes, CrunchDatasets.asTarget(outputDataset, true));
+    write(personOutcmes, CrunchDatasets.asTarget(outputDatasetUri.toString(), true));
 
     final PipelineResult result = run();
     if (!result.succeeded()) {
