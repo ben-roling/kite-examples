@@ -193,6 +193,7 @@
                   <jobProperties>
                     <workflowsPath>/user/${user.name}/apps</workflowsPath>
                     <datasetRepositoryUri>repo:hive://localhost:9083</datasetRepositoryUri>
+                    <datasetDefinitionsPath>/user/${user.name}/apps/datasets.xml</datasetDefinitionsPath>
                     <inputPathUri>/user/cloudera/persons.txt</inputPathUri>
                   </jobProperties>
                   <oozieUrl>http://localhost.localdomain:11000/oozie</oozieUrl>
@@ -241,6 +242,7 @@
                   <jobProperties>
                     <workflowsPath>/user/${user.name}/apps</workflowsPath>
                     <datasetRepositoryUri>repo:hive://localhost:9083</datasetRepositoryUri>
+                    <datasetDefinitionsPath>/user/${user.name}/apps/datasets.xml</datasetDefinitionsPath>
                   </jobProperties>
                   <oozieUrl>http://localhost.localdomain:11000/oozie</oozieUrl>
                 </configuration>
@@ -288,6 +290,7 @@
                   <jobProperties>
                     <workflowsPath>/user/${user.name}/apps</workflowsPath>
                     <datasetRepositoryUri>repo:hive://localhost:9083</datasetRepositoryUri>
+                    <datasetDefinitionsPath>/user/${user.name}/apps/datasets.xml</datasetDefinitionsPath>
                   </jobProperties>
                   <oozieUrl>http://localhost.localdomain:11000/oozie</oozieUrl>
                 </configuration>

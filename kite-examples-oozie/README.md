@@ -84,6 +84,8 @@ Person is the first dataset in this example.  The input used to produce that Dat
 
 * Copy persons.txt from src/main/resources to /user/cloudera directory in HDFS
 
+* Copy datasets.xml from src/main/resources to /user/cloudera/apps directory in HDFS
+
 ## Running
 * Run "mvn clean package -Pdeploy-example"
     * this will create the Person, PersonOutcomes, and PersonSummary base Datasets and deploy and start the associated

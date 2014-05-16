@@ -1,10 +1,7 @@
 <coordinator-app name="Person-c" frequency="${coord:hours(1)}" start="2014-04-24T00:00Z" end="2999-12-31T23:59Z"
   timezone="UTC" xmlns="uri:oozie:coordinator:0.4">
   <datasets>
-    <dataset name="Person" frequency="${coord:hours(1)}" initial-instance="2014-04-24T00:00Z" timezone="UTC">
-      <uri-template>${datasetRepositoryUri}?dataset-name=Person&amp;partition-key=[${YEAR}${MONTH}${DAY}${HOUR}${MINUTE}]
-      </uri-template>
-    </dataset>
+    <include>${datasetDefinitionsPath}</include>
   </datasets>
   <output-events>
     <data-out name="output" dataset="Person">
