@@ -31,6 +31,8 @@ Person is the first dataset in this example.  The input used to produce that Dat
     * kite-data-hcatalog-0.13.1-SNAPSHOT.jar
     * kite-data-oozie-0.13.1-SNAPSHOT.jar
     * commons-jexl-2.1.1.jar
+    * jackson-core-2.3.1.jar
+    * jackson-databind-2.3.1.jar
 
 * Add the following to oozie-site.xml Safety Valve:
 
