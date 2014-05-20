@@ -27,9 +27,9 @@ Person is the first dataset in this example.  The input used to produce that Dat
 * Build [dataset uris prototype](https://github.com/ben-roling/kite/tree/dataset_uri_prototype) branch of kite
 
 * Drop the following jars in /var/lib/oozie
-    * kite-data-core-0.13.1-SNAPSHOT.jar
-    * kite-data-hcatalog-0.13.1-SNAPSHOT.jar
-    * kite-data-oozie-0.13.1-SNAPSHOT.jar
+    * kite-data-core-0.14.1-SNAPSHOT.jar
+    * kite-data-hcatalog-0.14.1-SNAPSHOT.jar
+    * kite-data-oozie-0.14.1-SNAPSHOT.jar
     * commons-jexl-2.1.1.jar
     * jackson-core-2.3.1.jar
     * jackson-databind-2.3.1.jar
